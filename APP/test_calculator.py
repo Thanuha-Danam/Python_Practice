@@ -1,3 +1,7 @@
+### Build the app with 
+###   python -m PyInstaller test_calculator.py -w --onefile
+###
+
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
@@ -54,7 +58,7 @@ class CalculatorApp(App):
                 #Don't add two operators right after each other
                 return
             elif current == "" and button_text in self.operators:
-                return  # First character cannot be an operator
+                return  # First character cannotcd.. be an operator
             else:
                 new_text = current + button_text
                 self.solution.text = new_text
